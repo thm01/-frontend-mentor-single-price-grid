@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  background-color: #e5eff5;
+  font-family: "Karla", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #98a6bd;
+}
+
+.carte {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  margin: 15px auto;
+  background-color: yellow;
+  border-radius: 50px;
+}
+
+.description {
+  min-width: 280px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px 5px 0px 0px;
+  grid-area: description;
+}
+
+.abonnement {
+  min-width: 280px;
+  background-color: #2ab2af;
+  color: white;
+  padding: 30px;
+  grid-area: abonnement;
+}
+
+.why-us {
+  min-width: 280px;
+  background-color: #66dbd9;
+  color: white;
+  padding: 30px;
+  border-radius: 0px 0px 5px 5px;
+  grid-area: whyUs;
+}
+
+.description h2 {
+  color: #2ab2af;
+  font-weight: bolder;
+}
+
+.description span {
+  color: #c0df34;
+  font-weight: bolder;
+}
+
+.description p {
+  line-height: 1.75rem;
+}
+
+p.prix {
+  font-weight: lighter;
+}
+
+span.prix {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.abonnement a {
+  text-decoration: none;
+  color: white;
+}
+
+.bouton {
+  background-color: #c0df34;
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+  -webkit-box-shadow: #259d9b 0px 10px 10px 0px;
+          box-shadow: #259d9b 0px 10px 10px 0px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.bouton:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  color: #c0df34;
+  background-color: white;
+}
+
+.why-us p {
+  width: 75%;
+  font-weight: lighter;
+}
+
+@media screen and (min-width: 768px) {
+  .carte {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "description description" "abonnement whyUs";
+  }
+  .infos {
+    grid-area: infos;
+  }
+  .description {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: description;
+  }
+  .abonnement {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: abonnement;
+    border-radius: 0px 0px 0px 5px;
+  }
+  .why-us {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: whyUs;
+    border-radius: 0px 0px 5px 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
